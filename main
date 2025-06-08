@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join QuranChat Early Access</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    a.button {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    a.button:hover {
+      background-color: #1da851;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 Get Early Access to QuranChat</h1>
+    <p>Be part of the private WhatsApp group and get access to early features, spiritual tools & exclusive drops.</p>
+    <a class="button" href="https://chat.whatsapp.com/HrTlKAk6pUp1nPezcH1GX7" target="_blank">Join the WhatsApp Group</a>
+  </div>
+</body>
+</html>
