@@ -1,58 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join QuranChat Early Access</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    .container {
-      background: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-    }
-    h1 {
-      font-size: 26px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 16px;
-      margin-bottom: 30px;
-    }
-    a.button {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    a.button:hover {
-      background-color: #1da851;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Chat – Join Free</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #17443b;
+            --accent: #ffd44d;
+            --text: #fff;
+            --sub: rgba(255,255,255,0.85);
+            --r: 18px;
+        }
+        * { box-sizing: border-box; margin: 0; }
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        a { color: var(--text); text-decoration: none; }
+        .container { width: 92%; max-width: 1200px; margin: 0 auto; }
+        section { padding: 100px 0 60px 0; }
+        h1, h2, h3 { font-weight: 700; text-align: center; margin-bottom: .6em; letter-spacing: -.02em; }
+        h1 { font-size: 2.7rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.15rem; }
+        p.lead { font-size: 1.15rem; text-align: center; color: var(--sub); max-width: 640px; margin: 0 auto 2.5rem; }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #222 !important;
+            padding: 14px 32px;
+            border-radius: calc(var(--r)/1.2);
+            font-weight: 600;
+            font-size: 1.08rem;
+            transition: .25s;
+            box-shadow: 0 4px 16px rgba(255,212,77,.12);
+            margin-top: 18px;
+            text-align: center;
+        }
+        .btn:hover {
+            box-shadow: 0 4px 16px rgba(255,212,77,.4);
+            transform: translateY(-2px);
+            background: #ffe07a;
+        }
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background: var(--primary);
+            backdrop-filter: blur(6px);
+            padding: 18px 0;
+            z-index: 999;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+        .nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 32px;
+        }
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            font-size: .98rem;
+        }
+        .logo img { height: 64px; min-width: 64px; border-radius: 12px; }
+        /* Hero */
+        .hero { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 32px; padding-top: 140px; }
+        .hero img { width: 120px; border-radius: var(--r); box-shadow: 0 8px 24px rgba(0,0,0,.18); margin-bottom: 18px; }
+        .hero p { font-size: 1.22rem; color: var(--sub); max-width: 600px; }
+        /* Cards */
+        .grid { display: grid; gap: 24px; }
+        .auto-fit { grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
+        .card {
+            background: rgba(0,0,0,.13);
+            border: 1px solid rgba(255,255,255,.09);
+            border-radius: var(--r);
+            padding: 28px 22px 22px 22px;
+            text-align: left;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+        }
+        .card h3 { margin-bottom: 1rem; font-size: 1.08rem; }
+        .card ul { list-style: none; padding: 0; margin: 0; }
+        li { display: flex; gap: 10px; margin: 10px 0; }
+        li span.icon { font-size: 1.1rem; line-height: 1.2; }
+        li span.text { color: var(--sub); font-size: .97rem; }
+        /* Footer */
+        footer { background: var(--primary); text-align: center; padding: 60px 0 40px; font-size: .92rem; color: var(--sub); }
+        /* Improved Mobile Styles */
+        @media(max-width:900px){
+            .container { width: 98%; }
+            .nav { gap: 18px; }
+            .links { gap: 18px; font-size: 1.05rem; }
+            .hero img { width: 90px; }
+            .hero { padding-top: 110px; }
+            section { padding: 60px 0 40px 0; }
+        }
+        @media(max-width:600px){
+            h1{font-size:1.45rem} h2{font-size:1.08rem} h3{font-size:1rem}
+            .navbar { padding: 10px 0; }
+            .nav { flex-direction: column; gap: 10px; align-items: flex-start; }
+            .logo img { height: 56px; min-width: 56px; }
+            .links { flex-direction: column; gap: 10px; width: 100%; align-items: flex-start; }
+            .btn { width: 100%; padding: 14px 0; font-size: 1rem; margin-top: 10px; }
+            .hero { gap: 18px; padding-top: 80px; }
+            .hero img { width: 70px; margin-bottom: 10px; }
+            .hero p { font-size: 1rem; max-width: 98vw; }
+            .grid { gap: 14px; }
+            .auto-fit { grid-template-columns: 1fr; }
+            .card { padding: 16px 8px 14px 8px; }
+            .card h3 { font-size: .98rem; }
+            li span.text { font-size: .93rem; }
+            section { padding: 36px 0 24px 0; }
+            footer { padding: 32px 0 18px; font-size: .88rem; }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🚀 Get Early Access to QuranChat</h1>
-    <p>Be part of the private WhatsApp group and get access to early features, spiritual tools & exclusive drops.</p>
-    <a class="button" href="https://chat.whatsapp.com/HrTlKAk6pUp1nPezcH1GX7" target="_blank">Join the WhatsApp Group</a>
-  </div>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav">
+            <nav class="links">
+                <a href="#why">Why?</a>
+                <a href="#benefits">Benefits</a>
+                <a href="https://chat.whatsapp.com/HrTlKAk6pUp1nPezcH1GX7" class="btn" target="_blank">Join Free</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero container" id="join">
+        <h1>Help Us Build the Future of Islam Powered by Tech</h1>
+        <p>Join our <strong>free WhatsApp community</strong> and shape the future of Islamic tech together.<br>Be among the first to access Quran Chat and help us build an AI companion for Muslims worldwide.</p>
+        <a class="btn" href="https://chat.whatsapp.com/HrTlKAk6pUp1nPezcH1GX7" target="_blank">Join the WhatsApp Group</a>
+    </section>
+
+    <!-- Pain Points -->
+    <section id="why">
+        <div class="container">
+            <h2>The Struggle is Real</h2>
+            <p class="lead">Common challenges Muslims face in connecting with Allah.</p>
+            <div class="grid auto-fit">
+                <div class="card">
+                    <h3>You stand before Allah… but your mind is elsewhere.</h3>
+                    <ul>
+                        <li><span class="icon">💡</span><span class="text">“So woe to those who pray, but are heedless of their prayer.” (Qur'an 107:4‑5)</span></li>
+                        <li><span class="icon">💬</span><span class="text">80% of Muslims struggle with focus in Salah.</span></li>
+                        <li><span class="icon">❌</span><span class="text">Your body prays, but is your heart in it?</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>The Qur'an is the word of Allah—yet it sits unread.</h3>
+                    <ul>
+                        <li><span class="icon">💡</span><span class="text">“The heart that has no Qur'an is like a ruined house.” (Tirmidhi 2913)</span></li>
+                        <li><span class="icon">📊</span><span class="text">70% of Muslims wish they had a deeper connection.</span></li>
+                        <li><span class="icon">❌</span><span class="text">A neglected Qur'an leads to a neglected soul.</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Faith fades slowly… until one day, you feel nothing.</h3>
+                    <ul>
+                        <li><span class="icon">💡</span><span class="text">“Faith wears out just like clothes. Ask Allah to renew it.” (Al‑Hakim)</span></li>
+                        <li><span class="icon">🔄</span><span class="text">Most Muslims experience dips in Iman — but few notice in time.</span></li>
+                        <li><span class="icon">❌</span><span class="text">Weak Iman → Weak conviction. Until sin feels normal.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits">
+        <div class="container">
+            <h2>Imagine the Transformation</h2>
+            <p class="lead">What a deeper connection with Allah could feel like.</p>
+            <div class="grid auto-fit">
+                <div class="card">
+                    <h3>Imagine praying with full presence—just you and Allah.</h3>
+                    <ul>
+                        <li><span class="icon">✅</span><span class="text">Feel completely at peace the moment you say 'Allahu Akbar'.</span></li>
+                        <li><span class="icon">✅</span><span class="text">Eliminate distractions and connect deeply in every prayer.</span></li>
+                        <li><span class="icon">✅</span><span class="text">Transform Salah into a source of strength and clarity.</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>The Qur'an isn't just a book—it's the key to a peaceful heart.</h3>
+                    <ul>
+                        <li><span class="icon">✅</span><span class="text">Wake up feeling lighter, knowing your soul is nourished.</span></li>
+                        <li><span class="icon">✅</span><span class="text">Replace anxiety with trust—find answers when you need them most.</span></li>
+                        <li><span class="icon">✅</span><span class="text">Strengthen your bond with Allah and feel His presence daily.</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>A strong faith gives you confidence in every step of life.</h3>
+                    <ul>
+                        <li><span class="icon">✅</span><span class="text">Overcome doubts and feel secure in your path to Jannah.</span></li>
+                        <li><span class="icon">✅</span><span class="text">Gain the strength to handle life's challenges with ease.</span></li>
+                        <li><span class="icon">✅</span><span class="text">Live every day with purpose, knowing you're on the right track.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="community">
+        <div class="container">Quran Chat © 2025 • Built with ❤️ for the Ummah</div>
+    </footer>
 </body>
-</html>
+</html> 
